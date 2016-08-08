@@ -29,9 +29,9 @@ describe Hanami::Action::Params do
         @action.params[:unknown].must_equal     '2'
         @action.params[:_csrf_token].must_equal '3'
 
-        @action.params.raw.fetch(:id).must_equal          '1'
-        @action.params.raw.fetch(:unknown).must_equal     '2'
-        @action.params.raw.fetch(:_csrf_token).must_equal '3'
+        @action.params.raw.fetch('id').must_equal          '1'
+        @action.params.raw.fetch('unknown').must_equal     '2'
+        @action.params.raw.fetch('_csrf_token').must_equal '3'
       end
     end
 
